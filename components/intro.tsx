@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { BsLinkedin } from "react-icons/bs";
-import { FaTumblrSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Intro() {
   return (
@@ -22,7 +22,7 @@ export default function Intro() {
                 type: "tween",
                 duration: 0.2,
               }}>
-              <Image src={LogoIMG} alt='My Logo' width='19' height='192' quality='95' priority={true} className='h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl' />
+              <Image src={LogoIMG} alt='My Logo' width='192' height='192' quality='95' priority={true} className='h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl' />
             </motion.div>
             <motion.span className="absolute bottom-0 right-0 text-4xl"
               initial={{opacity: 0, scale: 0}}
@@ -58,8 +58,8 @@ export default function Intro() {
             <BsLinkedin />
           </a>
           
-          <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10' href='https://www.tumblr.com/' target="_blank"> 
-            <FaTumblrSquare />
+          <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10' href='https://www.instagram.com/' target="_blank"> 
+            <FaInstagram />
           
           </a>
         </motion.div>

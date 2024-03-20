@@ -11,7 +11,7 @@ export default function About() {
     animate = {{ opacity: 1, y: 0 }}
     transition={{ delay: 0.175 }}
     >
-    <SectionHeading>About me</SectionHeading>
+    <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
       Cupcake ipsum dolor sit amet wafer tiramisu. Marshmallow wafer gingerbread dessert dragée sugar plum. Cookie cotton candy gingerbread jelly beans powder toffee. Brownie cookie lemon drops donut gummi bears tootsie roll dragée marshmallow sweet.
       </p>

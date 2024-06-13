@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import { motion } from "framer-motion";
 import { links } from '@/lib/data';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function header() {
 
-  const {activeSection, setActiveSection} = useActiveSectionContext();
+  const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
 
   return (
     <header className='z-[999] relative'>
@@ -24,7 +24,13 @@ animate = {{ y: 0, x: "-50%", opacity: 1}}
         {
           links.map(link => (
             <motion.li className='h-3/4 flex items-center justify-center relative' key={link.hash} initial={{ y: -100, opacity: 0}} animate={{y: 0, opacity:1}}>
-              <Link className={clsx('flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition', {"text-gray-950": activeSection === link.name})} href={link.hash} onClick={() => setActiveSection(link.name)}>{
+              <Link className={clsx('flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition', {"text-gray-950": activeSection === link.name})} 
+                href={link.hash} onClick={() => {
+                  setActiveSection(link.name)
+                  setTimeOfLastClick(Date.now())
+                }}
+                >
+                  {
               link.name}
               {link.name === activeSection && (
               <motion.span className = "bg-gray-300 rounded-full absolute inset-0 -z-10"

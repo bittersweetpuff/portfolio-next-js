@@ -10,7 +10,7 @@ export default function Portfolio() {
       const {ref} = useSectionInView("Portfolio", 0.5);
 
       return (
-            <section ref={ref} id="portfolio" className="scroll-mt-28">
+            <section ref={ref} id="portfolio" className="scroll-mt-28 mb-28">
             <SectionHeading>Portfolio</SectionHeading>
             <div>
             {

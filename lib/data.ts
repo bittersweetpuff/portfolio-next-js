@@ -37,26 +37,26 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Hero Academy",
+    location: "Arcadia",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated after 6 months of studying. I immediately found a job as a junior dragonslayer",
     icon: React.createElement(LuGraduationCap),
     date: "2019",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Junior Dragonslayer",
+    location: "Drake Valley",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I slayed many dragons during my time in Drake Valley. I also improved my magic and cooking skills.",
     icon: React.createElement(CgWorkAlt),
     date: "2019 - 2021",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Dragonslayer",
+    location: "Dragon Peaks",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I'm now a Dragonslayer hunting dragons that lurk in Dragon Peaks. My main targets are Red and Blue dragons but Im open to new quests and challanges",
     icon: React.createElement(FaReact),
     date: "2021 - present",
   },

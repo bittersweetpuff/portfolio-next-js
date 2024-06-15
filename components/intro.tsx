@@ -10,9 +10,12 @@ import { HiDownload } from 'react-icons/hi';
 import { BsLinkedin } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Intro() {
   const {ref} = useSectionInView("Home", 0.5);
+  const {setActiveSection, setTimeOfLastClick }
+  = useActiveSectionContext();
 
   return (
       <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
@@ -53,15 +56,21 @@ export default function Intro() {
           transition={{
             delay: 0.1,
             }}>
-          <Link href="#contact" className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>Hit me up here<BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' /></Link>
+          <Link href="#contact" 
+          className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
+          >Hit me up here<BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' /></Link>
 
-          <a className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10' href='/CV.pdf' download={true}>Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition' /></a>
+          <a className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack' href='/CV.pdf' download={true}>Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition' /></a>
           
-          <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10' href="https://www.linkedin.com/" target='_blank'>
+          <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack' href="https://www.linkedin.com/" target='_blank'>
             <BsLinkedin />
           </a>
           
-          <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10' href='https://www.instagram.com/' target="_blank"> 
+          <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer bborderBlack' href='https://www.instagram.com/' target="_blank"> 
             <FaInstagram />
           
           </a>

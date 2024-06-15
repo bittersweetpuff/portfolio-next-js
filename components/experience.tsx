@@ -11,7 +11,7 @@ import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Experience() {
-    const { ref, inView } = useSectionInView("Experience", 0.5); 
+    const { ref, inView } = useSectionInView("Experience", 0.4); 
 
     return (
         <section id="experience" ref={ref}>

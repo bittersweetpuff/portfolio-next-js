@@ -15,7 +15,8 @@ export default function SubmitBtn() {
             transition-all group focus:scale-110
             hover:scale-110
             hover:bg-gray-950
-            active:scale-105 disabled: scale-100 disabled:bg-opacity-65"
+            active:scale-105 disabled:scale-100 disabled:bg-opacity-65
+            dark:bg-white dark:bg-opacity-10"
             >{
                 pending ? <div className="h-5 w-5 animate-spin
                 rounded-full border-b-2 border-white"></div> : (

@@ -24,7 +24,8 @@ export default function Project({ title, description, tags, imageUrl}: ProjectPr
           scale: scaleProgress,
           opacity: opacityProgress,
         }}
-        className="mb-3 sm:mb-8 last:mb-0 group group-even:pl-8">
+        className="mb-3 sm:mb-8 last:mb-0 group group-even:pl-8"
+        onClick={() => console.log("Projetc clicked!")}>
       <section className = "bg-gray-100 max-w-[42rem] rounded-lg border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:bg-white/10 dark:hover:bg-white/20">
       
       <div className="py-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 

@@ -11,7 +11,7 @@ import "yet-another-react-lightbox/styles.css";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({ title, description, tags, imageUrl}: ProjectProps) {
+export default function Project({ title, description, tags, imageUrl, gallerySlides }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -22,15 +22,7 @@ export default function Project({ title, description, tags, imageUrl}: ProjectPr
 
   const [open, setOpen] = React.useState(false);
 
-  const imageFiles = [
-    'projects/trophies/azrael3.png',
-    'projects/trophies/juni_succubxd.png',
-    'projects/trophies/laura4.png',
-  ];
   
-  const slides = imageFiles.map((file) => ({
-    src: file,
-  }));
 
 
   return (
@@ -72,7 +64,7 @@ export default function Project({ title, description, tags, imageUrl}: ProjectPr
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        slides={slides}
+        slides={gallerySlides}
       />
       </motion.div>
 

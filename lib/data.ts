@@ -62,6 +62,31 @@ export const experiencesData = [
   },
 ] as const;
 
+const companionsSlides = [
+  {src: 'projects/companions/la_feys.png'},
+  {src: 'projects/companions/orion.png'},
+  {src: 'projects/companions/vivi_lancelot.png'},
+  {src: 'projects/companions/vivi_lancelot2.png'},
+  {src: 'projects/companions/vivi3.png'},
+  {src: 'projects/companions/alyssa_nix.png'},
+];
+
+const trophiesSlides = [
+  {src: 'projects/trophies/azrael3.png'},
+  {src: 'projects/trophies/juni_succubxd.png'},
+  {src: 'projects/trophies/laura4.png'},
+];
+
+const weaponsSlides = [
+  {src: 'projects/weapons/igor.png'},
+  {src: 'projects/weapons/ibrahim.png'},
+  {src: 'projects/weapons/nyx.png'},
+  {src: 'projects/weapons/champs_color.png'},
+  {src: 'projects/weapons/laura_valerie.png'},
+  {src: 'projects/weapons/nicola.png'},
+];
+
+
 export const projectsData = [
   {
     title: "Companions",
@@ -69,6 +94,7 @@ export const projectsData = [
       "I worked with a band of greatest adventurers and warriors this land has ever seen",
     tags: ["Fighters", "Rogues", "Wizards", "Druids", "Paladins"],
     imageUrl: charactersImg,
+    gallerySlides: companionsSlides,
   },
   {
     title: "Trophies",
@@ -76,6 +102,7 @@ export const projectsData = [
       "In my life as a dragon slayer I managed to kill and collect trophies form many vile creatures",
     tags: ["Dragons", "Wyverns", "Trolls", "Drakes", "Wyrms"],
     imageUrl: uidesignImg,
+    gallerySlides: trophiesSlides,
   },
   {
     title: "Weapons",
@@ -83,6 +110,7 @@ export const projectsData = [
       "My inventory and stash is full of enchanted weapons, ready to be used in fight agains evil",
     tags: ["Swords", "Axes", "Spears", "Bows"],
     imageUrl: illustrationsImg,
+    gallerySlides: weaponsSlides,
   },
 ] as const;
 

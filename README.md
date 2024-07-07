@@ -1,5 +1,6 @@
 # Next.JS portfolio
 Based on ByteGrad [tutotial](https://www.youtube.com/watch?v=sUKptmUVIBM&ab_channel=ByteGrad) 
+With [lightGallery](https://www.lightgalleryjs.com/)
 
 ## Setting up contact via email
 * Get API key from [RESEND] (https://resend.com/)

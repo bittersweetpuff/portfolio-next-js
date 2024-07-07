@@ -5,6 +5,9 @@ import { projectsData } from '@/lib/data'
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -17,6 +20,19 @@ export default function Project({ title, description, tags, imageUrl}: ProjectPr
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  const [open, setOpen] = React.useState(false);
+
+  const imageFiles = [
+    'projects/trophies/azrael3.png',
+    'projects/trophies/juni_succubxd.png',
+    'projects/trophies/laura4.png',
+  ];
+  
+  const slides = imageFiles.map((file) => ({
+    src: file,
+  }));
+
+
   return (
   <motion.div
     ref={ref}
@@ -25,7 +41,7 @@ export default function Project({ title, description, tags, imageUrl}: ProjectPr
           opacity: opacityProgress,
         }}
         className="mb-3 sm:mb-8 last:mb-0 group group-even:pl-8"
-        onClick={() => console.log("Projetc clicked!")}>
+        onClick={() => setOpen(true)}>
       <section className = "bg-gray-100 max-w-[42rem] rounded-lg border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:bg-white/10 dark:hover:bg-white/20">
       
       <div className="py-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 
@@ -53,6 +69,13 @@ export default function Project({ title, description, tags, imageUrl}: ProjectPr
       group-even:group-hover:translate-y-3
       group-even:group-hover:rotate-2" />
       </section>
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        slides={slides}
+      />
       </motion.div>
+
+      
       );
 }

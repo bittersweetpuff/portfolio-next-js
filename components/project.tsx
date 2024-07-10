@@ -5,8 +5,11 @@ import { projectsData } from '@/lib/data'
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+
 import Lightbox from "yet-another-react-lightbox";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 
 type ProjectProps = (typeof projectsData)[number];
@@ -65,6 +68,7 @@ export default function Project({ title, description, tags, imageUrl, gallerySli
         open={open}
         close={() => setOpen(false)}
         slides={gallerySlides}
+        plugins={[Thumbnails]}
       />
       </motion.div>
 

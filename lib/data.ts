@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { HiOutlinePaintBrush } from "react-icons/hi2";
 import { LuGraduationCap } from "react-icons/lu";
 import illustrationsImg from "@/public/illustrations.png";
 import charactersImg from "@/public/charactets.png";
@@ -57,7 +57,7 @@ export const experiencesData = [
     location: "Dragon Peaks",
     description:
       "I'm now a Dragonslayer hunting dragons that lurk in Dragon Peaks. My main targets are Red and Blue dragons but Im open to new quests and challanges",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(HiOutlinePaintBrush),
     date: "2021 - present",
   },
 ] as const;
@@ -132,6 +132,7 @@ export const skillsData = [
   "Siege",
   "Dancing",
   "Singing",
+  "Engraving",
   "Talking to Animals",
   "Disney Princess Stuff",
 ] as const;
